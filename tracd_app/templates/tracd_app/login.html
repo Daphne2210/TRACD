@@ -1,0 +1,46 @@
+{% extends 'tracd_app/dashboard.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .mform{
+            background: #F5F0E5;
+            border:1px solid #F5F0E5;
+            margin-left: 300px;
+            margin-right: 350px;
+            margin-top: 60px;
+            box-shadow:20px 20px 10px grey;
+            background: white
+              }
+
+.box{
+	   		 margin-left: 35px;
+			font-family: 'Alata', sans-serif;
+            text-align:center
+ 			}
+
+</style>
+</head>
+<body>
+
+{% load crispy_forms_tags %}
+<form method="post" class="mform">
+    {%csrf_token%}
+    {{form|crispy}}
+    <input type="submit" class="btn btn-primary" / ><br/><br>
+    <a href="{% url 'signup' %}" >Don't have an account!!! Sign in</a>
+    
+
+    </form>
+</body>
+</html>
+{% endblock %}

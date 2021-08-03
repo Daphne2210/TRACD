@@ -1,0 +1,40 @@
+{% extends 'tracd_app/dashboard.html' %}
+
+{% block content %}
+
+<div class="col-lg-12">
+		
+		<hr>
+		<div class="card card-body">
+			<h1 class="panel-heading" >Train Schedule</h1>
+			<table class="table table-striped">
+				<tr>
+					<th> Train Number</th>
+					<th> From</th>
+					<th> To</th>
+					<th>Ticket Fare (in Rupees)</th>
+					<th>Train Status</th>
+					<th>Date</th>
+					<th>Time</th>
+				</tr>
+				{% for i in schedule %}
+					<tr>
+
+					
+					<td>{{i.Train_No}}</td>
+					<td>{{i.From}}</td>
+					<td>{{i.To}}</td>
+					<td>{{i.Train_fare}}</td>
+					<td>{{i.Train_Status}}</td>
+					<td>{{i.date}}</td>
+					<td>{{i.Time_of_arrival}}</td>
+					
+					
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+
+{% endblock %}<div class="row">
+	

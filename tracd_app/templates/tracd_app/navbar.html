@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Metro Zone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!---
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TicketLess Rails</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="{% url 'sc' %}">Schedule</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+
+      <li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+      <li><h3 style="color: grey ; font-family: Papyrus">Welcome {{ user.username }} !</h3></li>
+    </ul>
+  </div>
+</nav>
+  -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">MetroZone</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'hm' %}">HOME</a></li>
+        <li><a href="{% url 'signup' %}">SIGNUP</a></li>
+        <li><a href="{% url 'login' %}">LOGIN</a></li>
+        <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+        
+        
+        <li class="active"><a href="{% url 'sc' %}">SCHEDULE</a></li>
+        <li><h3 style="color: grey ; font-family: Montserrat, sans-serif">Welcome {{ user.username }} !</h3></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</body>
+</html>
